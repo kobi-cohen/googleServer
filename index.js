@@ -18,9 +18,9 @@ app.get('/',(req,res)=>{
 })
 app.post('/set',(req,res)=>{
    console.log('Post action was fired !')
-   console.log(req.body)
    searchValue.value=req.body.value
-   res.redirect('https://www.google.com/search?q='+searchValue.value+'&tbm=isch')
+   console.log(req.body)
+   res.send('value was set !')
 })
 
 
